@@ -21,7 +21,7 @@ class CreateLocationsTable extends Migration
                 latitude e longitude para um determinado país
                 já vou deixar ele configurado para ser chave estrangeira
             */
-            $table->integer('country_id')->unsigned();
+            $table->BigInteger('country_id')->unsigned();
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->integer('latitude');
             $table->integer('longitude');
